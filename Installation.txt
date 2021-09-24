@@ -1,0 +1,9 @@
+# Follow the given steps to install the project 
+# make sure python is installed first
+# installation by github , git must be installed first 
+# open up git terminal 
+# enter the following command
+git clone https://github.com/kalilinux-png/bill-automation
+# open up the folder bill-automation
+# run the module1.py file 
+
