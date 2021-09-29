@@ -150,15 +150,17 @@ def start():
         '''//*[@id="cpBody_txt_Data2"]''').send_keys('shubham@1234')
     winsound.Beep(1223, 100)
     time.sleep(12)
-    bro.find_element_by_xpath('''//*[@id="cpBody_btn_LDAPLogin"]''').click()
-    loader()
+
     try:
+        loader()
+        bro.find_element_by_xpath(
+            '''//*[@id="cpBody_btn_LDAPLogin"]''').click()
 
         if bro.find_element_by_xpath('''//*[@id="cpBody_txt_Data2"]''').is_displayed():
             bro.find_element_by_xpath(
                 '''//*[@id="cpBody_txt_Data2"]''').send_keys('shubham@1234')
             bro.find_element_by_xpath(
-                '''//*[@id="cpBody_cbx_newsession"]''').click() 
+                '''//*[@id="cpBody_cbx_newsession"]''').click()
             bro.find_element_by_xpath(
                 '''//*[@id="cpBody_btn_LDAPLogin"]''').click()
     except Exception as e:
@@ -199,8 +201,7 @@ if __name__ == '__main__':
     print(K_no)
     print('--------')
     Amount = list(file.get('Amount'))
-    print(Amount)
-    main_menu(320242001721, 6893, 1234)
+
     for k in range(len(K_no)):
         print(K_no[k], Amount[k])
         #  main_menu(sr, k_no, AMOUNT, provider='DISCOM'):
